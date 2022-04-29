@@ -6,7 +6,7 @@ import org.springframework.data.domain.Page;
 
 public interface UserService {
     AppUser saveUser(AppUser user);
-    AppUser getUser(String username);
+    AppUser getUser(String username) throws Throwable;
     Page<AppUser> getUsers();
     Role saveRole(Role role);
     void addRoleToUser(String username, String roleName);
